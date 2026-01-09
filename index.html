@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>Truck Simulator Prototype</title>
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="scene"></canvas>
+      <div id="hud">
+        <div class="hud-panel">
+          <h1>Truck Simulator Prototype</h1>
+          <p>Touch + drag the left pad to steer. Right pad to accelerate/brake.</p>
+          <div id="compat"></div>
+        </div>
+        <div class="touch-zone" id="left-stick">
+          <div class="stick-base"></div>
+          <div class="stick-knob"></div>
+        </div>
+        <div class="touch-zone" id="right-stick">
+          <div class="stick-base"></div>
+          <div class="stick-knob"></div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

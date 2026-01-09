@@ -1,0 +1,118 @@
+:root {
+  color-scheme: dark;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+#app {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: #0b0f14;
+}
+
+#scene {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+#hud {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  color: #f6f7fb;
+}
+
+.hud-panel {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: rgba(12, 18, 28, 0.75);
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  max-width: 340px;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  backdrop-filter: blur(8px);
+}
+
+.hud-panel h1 {
+  font-size: 1.05rem;
+  margin-bottom: 0.35rem;
+}
+
+#compat {
+  margin-top: 0.5rem;
+  display: grid;
+  gap: 0.25rem;
+}
+
+.compat-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.compat-item span:last-child {
+  font-weight: 600;
+}
+
+.touch-zone {
+  position: absolute;
+  bottom: 1.5rem;
+  width: 160px;
+  height: 160px;
+  pointer-events: auto;
+  touch-action: none;
+}
+
+#left-stick {
+  left: 1.5rem;
+}
+
+#right-stick {
+  right: 1.5rem;
+}
+
+.stick-base {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: rgba(8, 12, 18, 0.6);
+}
+
+.stick-knob {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 64px;
+  height: 64px;
+  margin-left: -32px;
+  margin-top: -32px;
+  border-radius: 50%;
+  background: rgba(120, 170, 255, 0.65);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.08s ease-out;
+}
+
+@media (max-width: 640px) {
+  .touch-zone {
+    width: 140px;
+    height: 140px;
+  }
+
+  .stick-knob {
+    width: 56px;
+    height: 56px;
+    margin-left: -28px;
+    margin-top: -28px;
+  }
+}
