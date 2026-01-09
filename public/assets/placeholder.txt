@@ -1,0 +1,1 @@
+Place compressed GLB/GLTF assets here (e.g., truck.glb with KTX2/Basis textures).
